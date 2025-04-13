@@ -22,7 +22,7 @@ and run it :
 | **Is Remote**            | Yes                                                      |
 | **Has attachments**      | No                                                     |
 | **Estimated solve time** | ~ 1h10     (1rst flag : 25min  // 2nd flag : 45mins )                                             |
-| **Solve instructions**   | see write-up                                   |
+| **Solve instructions**   | see writeup.md                                   |
 | **Flag**                 | 1 : **`THC{N0t_S_ppos3d_To_b3_hEr3}`** <br>2 : **`THC{WTF_1S_V3rIFying_US3R_INP_T}`**                                |
 
 
