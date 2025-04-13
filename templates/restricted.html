@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+{% if operations==True %}
+
+This page can only be accessed through the member's browser : XSS_Super_NAV 
+and from our local network (192.168.0.0 netmask : 255.255.0.0) For Security Purposes.  
+{% endif %}

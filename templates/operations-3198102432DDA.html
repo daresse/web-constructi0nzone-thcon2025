@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- THIS PAGE ISN'T FINISHED AND SHOULD NOT BE ACCESSED BY ANYBODY THAT'S WHY ITS ACCESS IS SO RESTRICTED-->
+<form class="mission_searchbar">
+    <label for="search">find your mission by entering your ID:</label>
+    <input type="text" id="search" name="search" required>
+    <button type="submit">Submit</button>  <!-- SUBMIT BUTTON -->
+    <h1>FLAG: THC{N0t_S_ppos3d_To_b3_hEr3}</h1>
+    <!--TODO : Tell Mikhail to stop drinking my coffee, it's been 5 times already. This has to stop...-->        
+    <!-- reminder : change the database scheme 
+        table : users:             
+            col : username 
+            col : password
+            are bad as table/column names and should be replaced with something less guessable-->
+</form>
+{{alert}}
+{% for item in data %}
+<section class="mission">
+    <div class="mission_container">
+        <h1>{{item[0]}}</h1> <!-- MISSION TITLE -->
+        <p>{{item[1]}}</p> <!-- MISSION DESC -->
+        <p class="agent_list">{{item[2]}}</p> <!-- associated agents -->
+
+    </div>
+</section>
+
+{% endfor %}
+
+{% endblock %}
+

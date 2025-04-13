@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtreme Scavenger Squad</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+
+<!--HEADERS GO THERE !-->
+            
+            <li><a href="/operations">Operations</a></li>
+            <li><a href="{{ url_for('index') }}">Intel</a></li>
+            <li><a href="{{ url_for('index') }}">Recruitment</a></li>
+            <li><a href="https://www.youtube.com/watch?v=lpiB2wMc49g">Instant Death</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+ <footer>
+        <p>Xtreme Scavenger Squad... stay safe</p>
+    </footer>
+</body>
+</html>
