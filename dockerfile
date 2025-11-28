@@ -21,4 +21,4 @@ COPY . /app
 EXPOSE 5000
 
 # Supprimer la base de données existante à chaque redémarrage et lancer l'application Flask en mode production
-CMD ["/bin/sh", "-c", "rm -f /app/agents.db && flask run --host=0.0.0.0 --port=5000"]
+CMD ["/bin/sh", "-c", "flask run --host=0.0.0.0 --port=5000"]

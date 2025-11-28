@@ -1,20 +1,10 @@
 #!/usr/bin/env python3 
 from flask import Flask, render_template, request, redirect, url_for, session, flash, send_from_directory
-#from werkzeug.security import generate_password_hash, check_password_hash
-#from functools import wraps
 import sqlite3
-from mydatabase import init_db
 
 ## VAR FOR "suffisait_de_demander"
-app = Flask(__name__, template_folder='./templates')
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
-
-###################################################################################################################################
-#                                                Initialization of the database                                                   #  
-#                                                                                                                                 #
-###################################################################################################################################
-
-init_db()
 
 member_temp_db = {
                     "0" : "SECRET.txt",
@@ -33,7 +23,7 @@ def member_info():
     # Check if member_id exists in member_temp_db
     if member_id in member_temp_db:
         fiche = member_temp_db[member_id]
-        return send_from_directory('static/members', fiche)
+        return send_from_directory('../static/members', fiche)
     else:
         return "Member not found", 404
     
